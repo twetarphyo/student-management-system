@@ -1,0 +1,9 @@
+/* .link{ */
+  /* text-shadow: 4px 4px 2px #222; */
+  /* color: ; */
+
+/* } */
+.link:hover{
+  text-shadow: 6px 6px 3px grey;
+  cursor: pointer;
+}
