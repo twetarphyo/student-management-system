@@ -17,7 +17,7 @@ class StudentController extends Controller
 
     public function __construct() {
 
-        $this->middleware('auth')->except(['index','create','update','edit']);
+        $this->middleware('auth')->except(['index','create','update','edit','view']);
     }
     function index() {
 
@@ -91,9 +91,17 @@ class StudentController extends Controller
 
       $stu=Student::find($id);
       $stu->delete();
+
       return back();
     }
 
+    public function view(Student $student){
+
+      $stu=Student::find($student);
+      // $stud=dd($stu);
+      return view('students.view', compact('stu'));
+      // return $stud;
+    }
   // public function alert(){
   //
   //     Alert::message('Hello!');

@@ -25,12 +25,13 @@
 				<td>{{$student->age}}</td>
 				<td>{{$student->created_at->toFormattedDateString() }}</td>
 				<td>
-					<a href="{{ route('update', $student->id )}}" class="btn btn-info" > Edit </a>
+					<a href="{{ route('view', $student->id )}}" class="btn btn-default" > View </a>
+					/&nbsp;<a href="{{ route('update', $student->id )}}" class="btn btn-info" > Edit </a>
 					 <form style="max-width: 70px;display: inline;" class="inline-form" action="{{ route('delete', $student->id )}}" method="post" >
 
 					    {{ method_field('delete') }}
 					    {{ csrf_field() }}
-						<a href="#" class="btn btn-danger">Delete</a>
+						/&nbsp;<button class="btn btn-danger">Delete</button>
 					</form>
 					<!-- /&nbsp;<a href="{{ route('delete', $student->id )}}" > <button type="button" name="button" class="btn btn-danger inline-form">Delete</button></a>  -->
 

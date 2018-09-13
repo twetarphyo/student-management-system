@@ -35,6 +35,8 @@ Route::post('/update/{student}','StudentController@edit');
 
 Route::delete('/delete/{student}', 'StudentController@delete')->name('delete');
 
+Route::get('/view/{student}', 'StudentController@view')->name('view');
+
 // Route::get('/SweetAlert', 'StudentController@alert');
 
 // Route::get('/edit/{id}', 'StudentController@editData')->name('edit');
